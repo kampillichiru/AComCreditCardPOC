@@ -1,0 +1,63 @@
+﻿<div class="card">
+    <h4 class="card-header">Credit Card Application Form</h4>
+    <div class="card-body card-application-form">
+        <form [formGroup]="cardApplicationForm" (ngSubmit)="onSubmit(cardApplicationForm.value)">
+            <div class="form-group">
+                <label for="card-id">Card Name: {{cardDetails.cardName}}
+                </label>
+              </div>
+              <div class="form-group">
+                <label for="first-name">First Name: </label>
+                <input  class="form-control" id="first-name" type="text" formControlName="firstName" placeholder="Enter First Name">
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name: </label>
+                <input class="form-control" id="last-name" type="text" formControlName="lastName" placeholder="Enter Last Name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email: </label>
+                <input class="form-control" id="email" type="email" formControlName="email" placeholder="name@example.com">
+              </div>
+              <div class="form-group">
+                <label for="phoneNumber">Phone Number: </label>
+                <input class="form-control" id="phoneNumber" maxlength="10" formControlName="phoneNumber" placeholder="Enter Phone Number">
+              </div>
+              <div class="form-group">
+                <label for="address">Address: </label>
+                <textarea class="form-control" id="address" formControlName="address" placeholder="Enter address" rows="5"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="creditScore">Credit Score: </label>
+                <input class="form-control" id="creditScore" type="number" formControlName="creditScore" placeholder="Enter Credit Score">
+              </div>
+              <div class="form-group">
+                <label for="annualSalary">Annual Salary: </label>
+                <input class="form-control" id="annualSalary" type="number" formControlName="annualSalary" placeholder="Enter Annual Salary">
+              </div>
+              <div class="form-group">
+                <div class="form-check form-check-inline">
+                  <label for="residentialSatus">Residential Satus: </label> &nbsp;&nbsp;&nbsp;
+                  <input class="form-check-input" type="radio" name="residentialSatus" id="residentialSatus" value="indian">
+                  <label class="form-check-label" for="residentialSatus">Indian</label>&nbsp;&nbsp;&nbsp;
+                  <input class="form-check-input" type="radio" name="residentialSatus" id="residentialSatus" value="others">
+                  <label class="form-check-label" for="residentialSatus">Others</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-check form-check-inline">
+                  <label for="typeOfEmployment">Type Of Employment: </label> &nbsp;&nbsp;&nbsp;
+                  <input class="form-check-input" type="radio" name="permanent" id="typeOfEmployment" value="permanent">
+                  <label class="form-check-label" for="typeOfEmployment">Permanent</label>&nbsp;&nbsp;&nbsp;
+                  <input class="form-check-input" type="radio" name="contract" id="typeOfEmployment" value="contract">
+                  <label class="form-check-label" for="typeOfEmployment">Contract</label>
+                </div>
+              </div>
+            <div class="form-group">
+                <button [disabled]="loading" class="btn btn-primary">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                    Apply Now
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

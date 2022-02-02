@@ -1,0 +1,34 @@
+[{
+    "creditCardTypeId": 1,
+    "cardName": "Regalia",
+    "basicOffers": null,
+    "pricing": 0,
+    "annualFee": 1500,
+    "eligibilityCriteriaList": [
+      {
+        "id": 1,
+        "ageLimit": 35,
+        "annualSalary": 350000,
+        "creditScore": 750,
+        "residentialStatus": "Indian",
+        "typeOfEmployment": "Permanent"
+      }
+    ]
+  },
+  {
+    "creditCardTypeId": 2,
+    "cardName": "Regalia",
+    "basicOffers": null,
+    "pricing": 10,
+    "annualFee": 3000,
+    "eligibilityCriteriaList": [
+      {
+        "id": 1,
+        "ageLimit": 30,
+        "annualSalary": 250000,
+        "creditScore": 750,
+        "residentialStatus": "Indian",
+        "typeOfEmployment": "Permanent"
+      }
+    ]
+  }]

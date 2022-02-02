@@ -1,0 +1,44 @@
+﻿<div class="table-responsive-sm"> 
+    <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Card Name</th>
+            <th scope="col">Eligibility Criteria</th>
+            <th scope="col">Basic Offers</th>
+            <th scope="col">Pricing</th>
+            <th scope="col">Annual Fee</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let card of cards">
+            <th scope="row">
+                <img class="img-thumbnail" src="{{imageSRC}}"/>
+            </th>
+            <td *ngFor="let eligibilityCriteria of card.eligibilityCriteriaList">
+                <tr>
+                    Agge Limit > {{eligibilityCriteria.ageLimit}}
+                </tr>
+                <tr>
+                    Annual Salary > {{eligibilityCriteria.annualSalary}}
+                </tr>
+                <tr>
+                    Credit Score > {{eligibilityCriteria.creditScore}}
+                </tr>
+                <tr>
+                    Residential Status - {{eligibilityCriteria.residentialStatus}}
+                </tr>
+                <tr>
+                    Type Of Employment - {{eligibilityCriteria.typeOfEmployment}}
+                </tr>
+            </td>
+            <td>{{card.basicOffers}}</td>
+            <td>{{card.pricing}}</td>
+            <td>{{card.annualFee}}</td>
+            <td>
+                <button type="button" class="btn btn-success" (click)="selectedCard(card)">Apply Now</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
